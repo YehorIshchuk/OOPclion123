@@ -1,37 +1,43 @@
 #include <iostream>
 #include <string>
-#include "Staff.h"
-#include "Waiter.h"
-#include "Customer.h"
-#include "Person.h"
-#include "Menu.h"
-#include "Drinks.h"
-
-
+#include"Staff.h"
+#include"Waiter.h"
+#include"Customer.h"
+#include"Person.h"
+#include"Menu.h"
+#include"Deserts.h"
+#include"Vehicle.h"
+#include"Car.h"
+#include"Bus.h"
 using namespace std;
 
-
-
-
 int main() {
-    Staff a;
-    a.PrintSalary();
 
-    Waiter a2;
-    a2.Print();
+    Waiter MyWaiter;
+    Staff* ptr = &MyWaiter;
+    ptr->ShowInfo();
+    MyWaiter.Serve();
 
-    Person MyPerson;
-    MyPerson.name = "Oleksandr Petrenko";
+    Person MyOrder;
+    Customer* ptr1 = &MyOrder;
+    ptr1->Order();    //Run time polymorphism
 
-    MyPerson.Order();
-    MyPerson.Complain();
 
-    Menu c;
-    c.Print();
+    Menu* ptr2 = new Deserts();
+    ptr2->Special(); // Calls the overridden Special() function
 
-    Drinks c1;
-    c1.Print();
+    Car car;
+    car.drive();
+                  //the interface was made through the pure virtual function
+    Bus bus;
+    bus.drive();
+
 
 
     return 0;
+
+
+
+
 }
+
