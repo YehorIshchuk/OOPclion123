@@ -1,41 +1,22 @@
 
 
-#ifndef OOPCLINE_STAFF_H
-#define OOPCLINE_STAFF_H
-#include <iostream>
+#ifndef LAB5_STAFF_H
+#define LAB5_STAFF_H
 #include <string>
-#include "Salary.h"
-using namespace std;
-
-
+#include <iostream>
 
 class Staff {
 public:
-    int freecars;
-    int priceofdelivery;
+    std::string position;
     int salary;
-    int tips;
-    string dish;
-
-private:
-    Salary staffSalary;
-
-public:
-
-    Staff(const Staff& other);
-
 
     Staff();
+    virtual ~Staff();
+
+    virtual void Work();
+    virtual void ShowInfo();
+};
 
 
-    ~Staff();
 
-        void PrintSalary();
-        void Print() {
-        cout << "Price of Delivery: " << priceofdelivery << endl;
-        cout << "Free Cars: " << freecars << endl;
-    }
-
-    };
-#endif //OOPCLINE_STAFF_H
-
+#endif //LAB5_STAFF_H
