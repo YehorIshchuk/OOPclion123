@@ -1,35 +1,18 @@
 
-#ifndef OOPCLINE_PERSON_H
-#define OOPCLINE_PERSON_H
-#include <iostream>
+
+#ifndef LAB5_PERSON_H
+#define LAB5_PERSON_H
 #include "Customer.h"
-
-using namespace std;
-
-
+#include <string>
 
 class Person : public Customer {
 public:
-
-    int doubleprofit;
-
-    Person &operator=(const Person&rhs){
-
-        if (this !=&rhs){
-            Customer::operator=(rhs);
-            doubleprofit = rhs.doubleprofit;
-
-        }
-        return *this;
-    }
-
     Person();
     ~Person();
-
-    void Complain () {
-        cout << "Why the food is already cold? " << endl;
-    }
+    void Order() override;
+    void Order1();
+private:
+    int phonenumber;
+    std::string person;
 };
-
-
-#endif //OOPCLINE_PERSON_H
+#endif //LAB5_PERSON_H
