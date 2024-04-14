@@ -1,15 +1,13 @@
-#include <iostream>
 #include "Customer.h"
-
+#include<iostream>
 using namespace std;
 
+Customer::Customer() {}
 
-Customer :: Customer() : numberoforders(5), profit(1079){
-    cout << "Customer constructor was called " << endl;
-
+Customer::~Customer() {
+   cout << "Customer destructor was called" << std::endl;
 }
 
-Customer :: ~Customer() {
-    cout << "Customer destructor was called " << endl;
-};
-
+void Customer::Order() {
+    cout <<"What would you like to order:" << std::endl;
+}
