@@ -1,18 +1,26 @@
-#include<iostream>
-#include"Waiter.h"
+#include "Waiter.h"
+#include <iostream>
 using namespace std;
 
+Waiter::Waiter() : Staff(), name("Ivan") {}
 
-
-
-Waiter :: Waiter() : Staff(), priceofdelivery(75),freecars(3), dish("Pasta"){
-    cout << "Waiter constructor was called " << endl;
+Waiter::~Waiter() {
+    cout << "Waiter destructor was called" << std::endl;
 }
 
-Waiter :: Waiter(const Waiter& other) : Staff(other), doublesalary{other.doublesalary} {
-    cout << "Waiter copy constructor was called" << endl;
+void Waiter::Serve() const {
+    cout << "I am " << position << std::endl;
+    cout << "I am completing orders of customers" << std::endl;
+    cout << "Salary: " << salary << std::endl;
+    cout << "Name: " << name << std::endl;
 }
 
-Waiter :: ~Waiter() {
-    cout << "Waiter destructor was called" << endl;
+void Waiter::Work() {
+    cout << "Waiter is working" << std::endl;
+}
+
+void Waiter::ShowInfo() {
+    cout << "Position: " << position << std::endl;
+    cout << "Salary: " << salary << std::endl;
+    cout << "Name: " << name << std::endl;
 }
