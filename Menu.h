@@ -1,20 +1,15 @@
 
-#ifndef OOPCLINE_MENU_H
-#define OOPCLINE_MENU_H
-#include <iostream>
-using namespace std;
 
+#ifndef LAB5_MENU_H
+#define LAB5_MENU_H
+#include <iostream>
+#include <string>
 
 class Menu {
 public:
-    int price;
-
     Menu();
-
-    ~Menu();
-
-    void Print() {
-        cout << "Price: " << price << endl;;
-    }
+    virtual ~Menu();
+    virtual void Special() = 0; // Pure virtual function
 };
-#endif //OOPCLINE_MENU_H
+
+#endif //LAB5_MENU_H
