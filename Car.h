@@ -1,13 +1,23 @@
 
-#ifndef LAB5_CAR_H
-#define LAB5_CAR_H
+
+#ifndef LAB4_CAR_H
+#define LAB4_CAR_H
+
 #include "Vehicle.h"
-using namespace std;
 
 class Car : public Vehicle {
-public:
+private:
+    int numWheels;
 
-    void drive() override;
+public:
+    Car(const string& brand, int numWheels);
+    Car(const Car& other);
+    Car(Car&& other) noexcept;
+    ~Car();
+
+    Car& operator=(const Car& other);
+
+    void display() const;
 };
 
-#endif //LAB5_CAR_H
+#endif //LAB4_CAR_H
