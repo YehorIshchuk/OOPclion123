@@ -1,22 +1,26 @@
 
+#ifndef LAB4_STAFF_H
+#define LAB4_STAFF_H
 
-#ifndef LAB5_STAFF_H
-#define LAB5_STAFF_H
-#include <string>
+
+
 #include <iostream>
+#include <string>
+
+using namespace std;
 
 class Staff {
-public:
-    std::string position;
-    int salary;
+protected:
+    string name;
+    int age;
+    string designation;
 
-    Staff();
+public:
+    Staff(const string& name, int age, const string& designation);
     virtual ~Staff();
 
-    virtual void Work();
-    virtual void ShowInfo();
+    void display();
 };
 
 
-
-#endif //LAB5_STAFF_H
+#endif //LAB4_STAFF_H
