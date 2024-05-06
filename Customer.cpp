@@ -1,13 +1,13 @@
 #include "Customer.h"
-#include<iostream>
-using namespace std;
 
-Customer::Customer() {}
+Customer::Customer(const string& n, int a) : name(n), age(a) {}
 
-Customer::~Customer() {
-   cout << "Customer destructor was called" << std::endl;
+Customer::~Customer() {}
+
+string Customer::getName() const {
+    return name;
 }
 
-void Customer::Order() {
-    cout <<"What would you like to order:" << std::endl;
+int Customer::getAge() const {
+    return age;
 }

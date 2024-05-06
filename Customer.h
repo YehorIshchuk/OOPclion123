@@ -1,15 +1,25 @@
 
 
-#ifndef LAB5_CUSTOMER_H
-#define LAB5_CUSTOMER_H
-#include <iostream>
+#ifndef LAB4_CUSTOMER_H
+#define LAB4_CUSTOMER_H
+
+#include <string>
+
 using namespace std;
 
 class Customer {
+private:
+    string name;
+    int age;
+
 public:
-    Customer();
-    virtual ~Customer();
-    virtual void Order();
+    Customer(const string& n, int a);
+    ~Customer();
+
+    string getName() const;
+    int getAge() const;
 };
 
-#endif //LAB5_CUSTOMER_H
+
+
+#endif //LAB4_CUSTOMER_H
