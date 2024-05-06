@@ -1,21 +1,22 @@
 
+#ifndef LAB4_WAITER_H
+#define LAB4_WAITER_H
 
-#ifndef LAB5_WAITER_H
-#define LAB5_WAITER_H
-#include <iostream>
-#include"Staff.h"
+
+#include "Staff.h"
 
 class Waiter : public Staff {
-public:
-    std::string name;
+private:
+    int experienceYears;
 
-    Waiter();
+public:
+    Waiter(const string& name, int age, int experienceYears);
     ~Waiter();
 
-    void Serve() const;
-
-    void Work() override;
-    void ShowInfo() override;
+    void display();
 };
 
-#endif //LAB5_WAITER_H
+
+
+
+#endif //LAB4_WAITER_H
